@@ -354,6 +354,7 @@ a {
   display: none;
   background-color: white;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 0;
 }
 #project-detail .inner-scroll {
