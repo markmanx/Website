@@ -251,7 +251,7 @@ a {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #fafafa;
+  background-color: #eaeaea;
   z-index: -2;
 }
 .project {
@@ -404,7 +404,7 @@ a {
   justify-content: center;
   width: 100%;
   min-height: 600px;
-  background-color: #fafafa;
+  background-color: #eaeaea;
 }
 #project-detail .content video {
   display: block;

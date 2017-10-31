@@ -1,5 +1,6 @@
 var projectDetailMode = false,
-    $els;
+    $els,
+    clickLock = false;
 
 function init() {
     $els = {
@@ -13,22 +14,14 @@ function init() {
     for (var i = 0; i < projects.length; i++) {
         (function(i) {
             var $project = compileProject( projects[i], i );
-            $project.click( function() { loadProjectDetail( projects[i], $project ) });
+            $project.click( function() { 
+                if (!clickLock) loadProjectDetail( projects[i], $project ) 
+            });
             $els.projects.find('.projects-wrapper').append( $project );
         })(i)
     }
 
     $('#back').click(closeProject);
-
-    $('.project').on('mouseover', function(e) {
-        var $hoverEl = $(this).find('.hoverbg');
-        TweenMax.to($hoverEl, 1, {width: '100%', ease: Expo.easeOut})
-    });
-
-    $('.project').on('mouseout', function(e) {
-        var $hoverEl = $(this).find('.hoverbg');
-        TweenMax.to($hoverEl, 1, {width: '0', ease: Expo.easeOut})
-    });
 
     $('.project').hover(function(e) {
             TweenLite.to($(this).find('.thumb-container img'), 0.5, {marginTop: 40, rotationY: -35, rotation: 0, scale: 1, ease: Expo.easeOut})
@@ -116,9 +109,22 @@ function loadProjectDetail(project, $el) {
 }
 
 function closeProject() {
+    clickLock = true;
     $('body').css('overflow', 'scroll');
-    TweenMax.fromTo('#main-container', 1, {marginLeft: -300}, {marginLeft: 0, ease: Expo.easeOut})
-    TweenMax.to('#project-detail', 0.5, {left: window.innerWidth, ease: Quad.easeIn});
+    
+    var tl = new TimelineMax({ onComplete: unloadContent });
+    tl.appendMultiple([
+        TweenMax.fromTo('#main-container', 1, {marginLeft: -300}, {marginLeft: 0, ease: Expo.easeOut}),
+        TweenMax.to('#project-detail', 0.5, {left: window.innerWidth, ease: Quad.easeIn})
+    ]);
+}
+
+function unloadContent() {
+    $els.detail.find('.title').html('');
+    $els.detail.find('.blurb').html('');
+    $els.detail.find('.col:eq(1)').html('');
+    $els.detail.find('.content').html('');
+    clickLock = false;
 }
 
 function onResize() {
