@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<!--<link rel="stylesheet/less" type="text/css" href="css/style.less" />-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/ScrollToPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.5/paper-core.min.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/Interactive.js"></script>
+</head>
+<body>
+
+<div id="main-container">
+    <div id="intro" class="section">
+        <canvas id="canvas"></canvas>
+        <div class="content-container">
+            <div class="line">
+                <div class="line-inner">Interactive</div>
+            </div>
+            <div class="line">
+                <div class="line-inner">Developer</div>
+            </div>
+            <div id="portfolio-text" class="text-4"><br/>Mark Mankarious&nbsp;&nbsp;/&nbsp;&nbsp;Portfolio</div>
+        </div>
+    </div>
+
+    <div id="profile" class="section">
+        <div class="content-container">
+            <div class="dual-column profile">
+                <div class="col">
+                    <img id="profile-pic" src="assets/images/me.png"><br/>
+                </div>
+                <div class="col text-4">
+                    <div class="text-3">Hi, I'm Mark Mankarious.<br/>A London based interactive designer &amp; developer.</div>
+                    <br/><br/>
+                    <div class="body">
+                        I'm interested in how technology can be used to entertain and immerse the user in something new. 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="section">
+        <div class="bg"></div>
+        <div class="content-container">
+            <div class="section-title">Projects</div>
+            <div class="projects-wrapper"></div>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <div class="content-container">
+            <div class="section-title">Contact</div>
+            <div class="dual-column halves">
+                <div class="text-1">Say<br/>&nbsp;hello</div>
+                <div>
+                    <div class="text-5">Email</div>
+                    <div class="text-3"><a href="mailto:mz.mankarious@gmail.com">mz.mankarious@gmail.com</a></div>
+                    <br/><br/>
+                    <div class="text-5">Codepen</div>
+                    <div class="text-3"><a href="https://codepen.io/markmanx01/">/markmanx01</a></div>
+                    <br/><br/>
+                    <div class="text-5">Twitter</div>
+                    <div class="text-3"><a href="https://twitter.com/markmankarious">/markmankarious</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="project-detail" class="section">
+        <div class="inner-scroll">
+            <div class="content-container">
+                <div id="header-bg"></div>
+                <div>
+                    <div id="back">< Back to Projects</div>
+                    <div class="title"></div>
+                    <div class="blurb"></div>
+                </div>
+                <div class="dual-column info-panel">
+                    <div class="col"></div>
+                    <div class="col text-5"></div>
+                </div>
+                <div class="content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

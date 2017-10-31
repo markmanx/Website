@@ -1,0 +1,448 @@
+/* === TEXT === */
+.text-1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10em;
+  font-weight: 700;
+  line-height: 0.95em;
+}
+@media only screen and (max-width: 476px) {
+  .text-1 {
+    font-size: 3.8em;
+    line-height: 0.9em;
+  }
+}
+.text-2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1.3em;
+}
+@media only screen and (max-width: 476px) {
+  .text-2 {
+    font-size: 3em;
+    line-height: 1.15em;
+  }
+}
+.text-3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.4em;
+}
+@media only screen and (max-width: 476px) {
+  .text-3 {
+    font-size: 1.4em;
+    line-height: 1.1em;
+  }
+}
+.text-4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+@media only screen and (max-width: 476px) {
+  .text-4 {
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+}
+.text-5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.6em;
+  color: #494949;
+}
+@media only screen and (max-width: 476px) {
+  .text-5 {
+    font-size: 1em;
+  }
+}
+.text-6 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  font-weight: 500;
+}
+@media only screen and (max-width: 476px) {
+  .text-6 {
+    font-size: 0.8em;
+  }
+}
+.info-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #a5a5a5;
+}
+@media only screen and (max-width: 476px) {
+  .info-title {
+    font-size: 0.8em;
+  }
+}
+.info-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.6em;
+  color: #494949;
+}
+@media only screen and (max-width: 476px) {
+  .info-text {
+    font-size: 1em;
+  }
+}
+.underline {
+  text-decoration: underline;
+}
+/* === COMMON ELEMENTS === */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#main-container {
+  width: 100%;
+  margin-bottom: 100px;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10em 0;
+}
+@media only screen and (max-width: 476px) {
+  .section {
+    padding: 6em 0;
+  }
+}
+.section-title {
+  display: block;
+  margin-bottom: 3.3em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.6em;
+  color: #494949;
+  color: #b62041;
+  font-weight: 700;
+}
+@media only screen and (max-width: 476px) {
+  .section-title {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 476px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+.content-container {
+  width: 960px;
+  margin: auto;
+  align-self: center;
+  overflow: hidden;
+}
+@media only screen and (max-width: 476px) {
+  .content-container {
+    width: auto;
+    margin: 0 35px;
+  }
+}
+.dual-column {
+  display: grid;
+  grid-column-gap: 80px;
+  grid-row-gap: 80px;
+}
+@media only screen and (max-width: 476px) {
+  .dual-column {
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+  }
+}
+.dual-column.halves {
+  grid-template-columns: 1fr 1fr;
+}
+@media only screen and (max-width: 476px) {
+  .dual-column.halves {
+    grid-template-columns: 1fr;
+  }
+}
+.dual-column.info-panel {
+  grid-template-columns: 0.2fr 0.6fr;
+}
+@media only screen and (max-width: 476px) {
+  .dual-column.info-panel {
+    grid-template-columns: 1fr;
+  }
+}
+.dual-column.profile {
+  grid-template-columns: 110px 1fr;
+}
+@media only screen and (max-width: 476px) {
+  .dual-column.profile {
+    grid-template-columns: 1fr;
+  }
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* === INTRO === */
+#intro {
+  height: 100vh;
+  justify-content: center;
+  background-color: #b62041;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.6em;
+  color: #494949;
+  padding: 0;
+  color: #ffffff;
+  opacity: 0;
+}
+@media only screen and (max-width: 476px) {
+  #intro {
+    font-size: 1em;
+  }
+}
+#intro .line {
+  display: block;
+  overflow: hidden;
+  height: 0.95em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 10em;
+  font-weight: 700;
+  line-height: 0.95em;
+}
+@media only screen and (max-width: 476px) {
+  #intro .line {
+    font-size: 3.8em;
+    line-height: 0.9em;
+  }
+}
+#intro .line-inner {
+  margin-top: 0;
+}
+/* === PROFILE === */
+#profile-pic {
+  width: 130px;
+}
+@media only screen and (max-width: 476px) {
+  #profile-pic {
+    width: 115px;
+  }
+}
+#profile .body {
+  color: #494949;
+}
+/* === PROJECTS === */
+#projects {
+  position: relative;
+}
+#projects .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fafafa;
+  z-index: -2;
+}
+.project {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 100px;
+}
+.project .highlight {
+  width: 0;
+  height: 10px;
+  margin-top: 25px;
+  background-color: #b62041;
+}
+.project .thumb-container {
+  position: absolute;
+  overflow: hidden;
+  bottom: 5px;
+  right: 0;
+  height: 100%;
+  width: 370px;
+  z-index: -1;
+  perspective: 500px;
+}
+.project .thumb-container img {
+  margin-top: 250;
+  width: 350px;
+  border: 5px solid white;
+}
+.project .index {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1.3em;
+  line-height: 0.8em;
+  color: white;
+}
+@media only screen and (max-width: 476px) {
+  .project .index {
+    font-size: 3em;
+    line-height: 1.15em;
+  }
+}
+@media only screen and (max-width: 476px) {
+  .project {
+    margin-top: 30px;
+  }
+}
+.project .title,
+#project-detail .title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 5em;
+  font-weight: 900;
+  line-height: 1.3em;
+}
+@media only screen and (max-width: 476px) {
+  .project .title,
+  #project-detail .title {
+    font-size: 3em;
+    line-height: 1.15em;
+  }
+}
+.blurb {
+  display: block;
+  color: #232323;
+  margin-top: 0.1em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  color: #494949;
+  font-weight: 300;
+}
+@media only screen and (max-width: 476px) {
+  .blurb {
+    font-size: 1.1em;
+    line-height: 1.3em;
+  }
+}
+/* === CONTACT === */
+#contact .info-text {
+  font-weight: 700;
+}
+/* === PROJECT DETAIL === */
+#project-detail {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: none;
+  background-color: white;
+  overflow-y: scroll;
+  padding: 0;
+}
+#project-detail .inner-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#project-detail #header-bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: #b62041;
+}
+#project-detail #back {
+  position: absolute;
+  margin-top: -105px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.6em;
+  color: #494949;
+  color: white;
+  cursor: pointer;
+}
+@media only screen and (max-width: 476px) {
+  #project-detail #back {
+    font-size: 1em;
+  }
+}
+#project-detail .info-panel {
+  padding: 150px 0 75px 0;
+}
+@media only screen and (max-width: 476px) {
+  #project-detail .info-panel {
+    padding: 4em 0;
+  }
+}
+#project-detail .info-panel .info-item-wrapper {
+  display: block;
+  margin-bottom: 1em;
+}
+#project-detail .info-panel .info-title {
+  text-transform: uppercase;
+}
+#project-detail .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10em;
+}
+#project-detail .content .video-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 600px;
+  background-color: #fafafa;
+}
+#project-detail .content video {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 70%;
+  top: 0;
+}
+@media only screen and (max-width: 476px) {
+  #project-detail .content video {
+    max-width: 100%;
+    max-height: 50%;
+  }
+}
+#project-detail .content img {
+  display: block;
+  margin-top: 100px;
+  max-width: 100%;
+}
+@media only screen and (max-width: 476px) {
+  #project-detail .content img {
+    margin-top: 40px;
+  }
+}
+canvas {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+#ad-showreel {
+  width: 960px;
+  height: 563px;
+}
+@media only screen and (max-width: 476px) {
+  #ad-showreel {
+    width: 300px;
+    height: 169px;
+  }
+}

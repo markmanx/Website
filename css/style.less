@@ -1,0 +1,419 @@
+@swatch1: rgb(0, 0, 0);
+@swatch2: #232323;
+@swatch3: #494949;
+@swatch4: #a5a5a5;
+@swatch5: #fafafa;
+@swatch6: #ffffff;
+@swatch7: #b62041;
+@margin: 35px;
+@smartphone: ~"only screen and (max-width: 476px)";
+@max-width: 960px;
+
+
+/* === TEXT === */
+
+.text-1 {  // Intro Text
+    font-family: 'Roboto', sans-serif;
+    font-size: 10em;
+    font-weight: 700;
+    line-height: 0.95em;
+
+    @media @smartphone {
+        font-size: 3.8em;
+        line-height: 0.9em;
+    }
+}
+
+.text-2 {  // Project Titles
+    font-family: 'Roboto', sans-serif;
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 1.3em;
+
+    @media @smartphone {
+        font-size: 3em;
+        line-height: 1.15em;
+    }
+}
+
+.text-3 { // Hi I'm Mark Text
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7em;
+    font-weight: 700;
+    line-height: 1.4em;
+
+    @media @smartphone {
+        font-size: 1.4em;
+        line-height: 1.1em;
+    }
+}
+
+.text-4 {  // Project blurb
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+
+    @media @smartphone {
+        font-size: 1.1em;
+        line-height: 1.3em;
+    }
+}
+
+.text-5 {  // Regular text
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.6em;
+    color: @swatch3;
+
+    @media @smartphone {
+        font-size: 1em;
+    }
+}
+
+.text-6 {  // Info Panel
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    font-weight: 500;
+
+    @media @smartphone {
+        font-size: 0.8em;
+    }
+}
+
+.info-title {
+    .text-6;
+    color: @swatch4;
+}
+
+.info-text {
+    .text-5;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+/* === COMMON ELEMENTS === */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main-container {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10em 0;
+
+    @media @smartphone {
+        padding: 6em 0;
+    }
+}
+
+.section-title {
+    display: block;
+    margin-bottom: 3.3em;
+    .text-5;
+    color: @swatch7;
+    font-weight: 700;
+
+    @media @smartphone {
+        margin-bottom: 50px;
+    }
+}
+
+.content-container {
+    width: @max-width;
+    margin: auto;
+    align-self: center;
+    overflow: hidden;
+
+    @media @smartphone {
+        width: auto;
+        margin: 0 @margin;
+    }
+}
+
+.dual-column {
+    display: grid;
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    @media @smartphone {
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+    }
+    
+    &.halves {
+        grid-template-columns: 1fr 1fr;
+
+        @media @smartphone {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.info-panel {
+        grid-template-columns: 0.2fr 0.6fr;
+        
+        @media @smartphone {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &.profile {
+        grid-template-columns: 110px 1fr;
+        
+        @media @smartphone {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* === INTRO === */
+
+#intro {
+    height: 100vh;
+    justify-content: center;
+    background-color: @swatch7;
+    .text-5;
+    padding: 0;
+    color: @swatch6;
+    opacity: 0;
+
+    .line {
+        display: block;
+        overflow: hidden;
+        height: 0.95em;
+        .text-1;
+    }
+
+    .line-inner {
+        margin-top: 0;
+    }
+}
+
+
+/* === PROFILE === */
+
+#profile-pic {
+    width: 130px;
+
+    @media @smartphone {
+        width: 115px;
+    }
+}
+
+#profile {
+    .body {
+        color: @swatch3;
+    }
+}
+
+
+/* === PROJECTS === */
+
+#projects {
+    position: relative;
+
+    .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: @swatch5;
+        z-index: -2;
+    }
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 100px;
+
+    .highlight {
+        width: 0;
+        height: 10px;
+        margin-top: 25px;
+        background-color: @swatch7;
+    }
+
+    .thumb-container {
+        position: absolute;
+        overflow: hidden;
+        bottom: 5px;
+        right: 0;
+        height: 100%;
+        width: 370px;
+        z-index: -1;
+        perspective: 500px;
+
+        img {
+            margin-top: 250;
+            width: 350px;
+            border: 5px solid white;
+        }
+    }
+
+    .index {
+        .text-2;
+        line-height: 0.8em;
+        color: white;
+    }
+
+    @media @smartphone {
+        margin-top: 30px;
+    }
+}
+
+.project .title, #project-detail .title {
+    .text-2;
+}
+
+.blurb {
+    display: block;
+    color: @swatch2;
+    margin-top: 0.1em;
+    .text-4;
+    color: @swatch3;
+    font-weight: 300;
+}
+
+
+/* === CONTACT === */
+
+#contact {
+    .info-text {
+        font-weight: 700;
+    }
+}
+
+
+/* === PROJECT DETAIL === */
+
+#project-detail {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: none;
+    background-color: white;
+    overflow-y: scroll;
+    padding: 0;
+
+    .inner-scroll {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #header-bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 0;
+        top: 0;
+        left: 0;
+        background-color: @swatch7;
+    }
+
+    #back {
+        position: absolute;
+        margin-top: -105px;
+        .text-5;
+        color: white;
+        cursor: pointer;
+    }
+
+    .info-panel {
+        padding: 150px 0 75px 0;
+        @media @smartphone { padding: 4em 0; }
+
+        .info-item-wrapper {
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        .info-title {
+            text-transform: uppercase;
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10em;
+
+        .video-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            min-height: 600px;
+            background-color: @swatch5;
+        }
+
+        video {
+            display: block;
+            width: auto;
+            max-width: 100%;
+            height: 70%;
+            top: 0;
+
+            @media @smartphone {
+                max-width: 100%;
+                max-height: 50%;
+            }
+        }
+
+        img {
+            display: block;
+            margin-top: 100px;
+            max-width: 100%;
+
+            @media @smartphone {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+canvas {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+}
+
+#ad-showreel {
+    width: @max-width;
+    height: 563px;
+
+    @media @smartphone {
+        width: 300px;
+        height: 169px;
+    }
+}
