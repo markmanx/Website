@@ -1,6 +1,7 @@
 var projectDetailMode = false,
     $els,
-    clickLock = false;
+    clickLock = false,
+    winW;
 
 function init() {
     $els = {
@@ -9,6 +10,8 @@ function init() {
         detail: $('#project-detail'),
         airplane: $('#airplane')
     }
+
+    winW = window.innerWidth;
 
     // Load projects list
     for (var i = 0; i < projects.length; i++) {
@@ -128,7 +131,10 @@ function unloadContent() {
 }
 
 function onResize() {
-    closeProject();
+    if (winW != window.innerWidth) {
+        closeProject();
+        winW = window.innerWidth;
+    }
 }
 
 $(document).ready(init);
